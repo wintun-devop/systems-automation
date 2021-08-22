@@ -27,7 +27,6 @@ service mysql start
 
 #Checking mysql status
 echo "installation process is complete and mysql is workng now!"
-service mysql status
 
 #configure mysql initial configuration
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
