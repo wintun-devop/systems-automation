@@ -6,16 +6,16 @@
 
 #Necessary Update for system packages
 echo "Updating the system packages ......................................................................................................."
-dnf update -y 
+dnf update -y
 echo "Packages update is done!!!!!!!!!!"
 
 #Necessary repo installation for mysql8
 echo "Installing mysql software packages................................................................................................."
 dnf -y install https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm
 
-#necessary software packages for mysql server(wget,net-tools are optional)
-dnf -y install mysql-server unzip wget make
-echo "Necessary software packages installation done!"  
+#necessary software packages for mysql server(wget,unzip and net-tools are optional)
+dnf -y install mysql-server unzip wget make net-tools
+echo "Necessary software packages installation done!"
 
 #Get start database services
 systemctl start mysqld
