@@ -10,7 +10,7 @@ apt update -y
 #Upgrading the downloaded packages
 apt upgrade -y
 
-#installing necessary packages and 
+#installing necessary packages and nsf server module
 apt install -y wget curl make unzip network-manager gcc net-tools nfs-kernel-server
 
 systemctl enable --now nfs-server
