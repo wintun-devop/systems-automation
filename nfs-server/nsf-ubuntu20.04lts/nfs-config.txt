@@ -1,0 +1,35 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Server Config
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#This is simple directory.It can be whatever directory as admnistrator desire
+sudo mkdir /home/ubuntu/nsfshare
+sudo chown nobody:nogroup /home/ubuntu/nsfshare
+sudo chmod -R 777 /home/ubuntu/nsfshare
+
+sudo vi /etc/exports
+
+#/mnt/nsfshare client-IP(rw,sync,no_subtree_check) for specific ip block
+/home/ubuntu/nsfshare 10.50.0.0/16(rw,sync,no_subtree_check)
+
+#/mnt/nsfshare *(rw,sync,no_subtree_check) for any address
+/home/ubuntu/nsfshare 10.50.0.0/16(rw,sync,no_subtree_check)
+
+sudo exportfs -rav
+
+
+sudo systemctl restart nfs-kernel-server
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Client Config
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#1
+sudo mkdir /home/ubuntu/nsf-clientshare
+mount -vvv -t nfs 10.50.0.158:/home/ubuntu/nsfshare /home/ubuntu/nsf-clientshare
+
+#2
+sudo mkdir /mnt/nsf-client-share
+sudo mount -vvv -t nfs 10.50.0.158:/home/ubuntu/nsfshare /mnt/nsf-client-share
+
+
+
