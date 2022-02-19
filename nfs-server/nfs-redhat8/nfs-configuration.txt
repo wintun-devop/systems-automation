@@ -1,0 +1,31 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Server Config
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#This is simple directory.It can be whatever directory as admnistrator desire
+sudo mkdir /home/ec2-user/nfs-share
+sudo chmod -R 777 /home/ec2-user/nfs-share
+
+sudo vi /etc/exports
+
+#/mnt/nsfshare client-IP(rw,sync,no_subtree_check) for specific ip block
+/home/ec2-user/nfs-share 10.50.0.0/16(rw,sync,no_all_squash,root_squash,no_subtree_check)
+
+#/mnt/nsfshare *(rw,sync,no_all_squash,root_squash,no_subtree_check for any address
+/home/ec2-user/nfs-share 10.50.0.0/16(rw,sync,no_all_squash,root_squash,no_subtree_check)
+
+sudo exportfs -rav
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Client Config
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#1
+sudo mkdir /home/ec2-user/nfs-clientshare
+sudo mount -t nfs 10.50.0.151:/home/ec2-user/nfs-share /home/ec2-user/nfs-clientshare
+
+#2
+sudo mkdir /home/ec2-user/nfs-clientshare
+sudo mount -vvv -t nfs 10.50.0.151:/home/ec2-user/nfs-share /mnt/client-share
+
+sudo mount | grep -i nfs
+
+
