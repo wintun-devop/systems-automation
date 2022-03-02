@@ -16,5 +16,5 @@ mkdir -p "${nsf_client_mount_point}"
 #mounting nsf on your desired mount point
 mount -vvv -t nfs "${nsf_server_share_point}" "${nsf_client_mount_point}"
 
-#checking the efs mounting status
+#checking the nsf mounting status
 mount | grep -i nfs
