@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository cash
+    apt:
+      update_cache: yes
+      
+  - name: install apache2 packages
+    apt:
+      name: apache2
+      state: absent
+  
+  -name: install wsgi adaptor mode for flask
+    apt:
+      name: libapache2-mod-wsgi
+      state: absent
+    
