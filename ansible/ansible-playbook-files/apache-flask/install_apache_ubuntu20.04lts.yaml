@@ -7,14 +7,17 @@
   - name: update repository cash
     apt:
       update_cache: yes
+    when: ansible_distribution == "Ubuntu"
       
   - name: install apache2 packages
     apt:
       name: apache2
       state: latest
+    when: ansible_distribution == "Ubuntu"
   
-  -name: install wsgi adaptor mode for flask
+  - name: install wsgi adaptor mode for flask
     apt:
       name: libapache2-mod-wsgi
       state: latest
+    when: ansible_distribution == "Ubuntu"
     
