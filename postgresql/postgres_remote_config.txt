@@ -1,0 +1,24 @@
+#########################################################################
+Remote Config(redhat8)
+#########################################################################
+Edit the /var/lib/pgsql/data/postgresql.conf file, and add this line:
+listen_addresses='*'
+port = 5432
+
+#encryptiong(We can use either one)
+cat /var/lib/pgsql/14/data/pg_hba.conf
+echo "host all all 0.0.0.0/0  md5" >> /var/lib/pgsql/14/data/pg_hba.conf
+echo "host all all 0.0.0.0/0  scram-sha-256" >> /var/lib/pgsql/14/data/pg_hba.conf
+
+
+systemctl restart postgresql-14
+
+#####################################################################################
+Remote Config(ubuntu)
+#####################################################################################
+Edit the /var/lib/pgsql/data/postgresql.conf file, and make uncomment and add '*':
+listen_addresses='*'
+
+#encryption(We can use either one)
+echo "host all all 0.0.0.0/0  md5" >> /etc/postgresql/14/main/pg_hba.conf
+echo "host all all 0.0.0.0/0  scram-sha-256" >> /etc/postgresql/14/main/pg_hba.conf
