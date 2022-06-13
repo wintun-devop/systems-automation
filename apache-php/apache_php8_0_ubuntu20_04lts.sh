@@ -40,5 +40,8 @@ apt install -y php8.0-{amqp,ast,bcmath,bz2,cgi,cli,common,curl,dba,dev,ds,enchan
 #expose the php packages information
 echo "<?php phpinfo() ?>" >> /var/www/html/info.php
 
+#installing mysql client core for remote mysql database connection
+apt install mysql-client-core-8.0 -y
+
 #restarting apache server
 systemctl restart apache2
