@@ -30,7 +30,7 @@ add-apt-repository ppa:ondrej/php -y
 #Update package information from php8.0 configured sources
 apt update -y 
 
-#install php8.0 modules
+#install php8.0 major packages
 apt install -y php8.0 libapache2-mod-php8.0
 
 #installing php-extensions
