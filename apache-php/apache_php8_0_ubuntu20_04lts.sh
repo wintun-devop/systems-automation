@@ -30,7 +30,7 @@ add-apt-repository ppa:ondrej/php -y
 #Update package information from php8.0 configured sources
 apt update -y 
 
-#install php8.0 modules
+#install php8.0 major packages
 apt install -y php8.0 libapache2-mod-php8.0
 
 #installing php-extensions
@@ -39,6 +39,9 @@ apt install -y php8.0-{amqp,ast,bcmath,bz2,cgi,cli,common,curl,dba,dev,ds,enchan
 
 #expose the php packages information
 echo "<?php phpinfo() ?>" >> /var/www/html/info.php
+
+#installing mysql client core for remote mysql database connection
+apt install mysql-client-core-8.0 -y
 
 #restarting apache server
 systemctl restart apache2
