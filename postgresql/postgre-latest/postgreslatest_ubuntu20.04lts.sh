@@ -3,6 +3,8 @@
 #Win Tun Hlaing(https://www.youtube.com/channel/UCz9ebjc-_3t3p49gGpwyAKA/videos)
 
 #http://www.mmuak.net or https://mmuak.blogspot.com/
+#sudo -i -u postgres (login)
+#psql (login)
 
 #Update/Download package information from all configured sources
 apt update -y
