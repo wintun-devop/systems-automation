@@ -5,19 +5,7 @@
 dnf update -y
 
 #installing libreswan and necessary software packages 
-dnf install net-tools firewalld curl wget unzip -y
-
-#Get start firewalld services
-systemctl start firewalld
-
-#Get enable firewalld services
-systemctl enable firewalld
-
-#add port 80 and 443 for ipsec
-firewall-cmd --add-port={80,443,3000}/tcp --permanent
-
-#restart the firewalld to be effective add port forwarding
-systemctl restart firewalld
+dnf install net-tools curl wget unzip -y
 
 #grafana section
 wget -q -O gpg.key https://rpm.grafana.com/gpg.key
