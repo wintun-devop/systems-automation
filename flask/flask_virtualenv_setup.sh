@@ -8,7 +8,7 @@
 virtualenv flaskproject01
 
 #change the director to flask project
-cd flaskproject01
+cd flaskproject01/
 
 #activate the flask project
 source bin/activate
