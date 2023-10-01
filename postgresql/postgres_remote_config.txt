@@ -23,5 +23,14 @@ listen_addresses='*'
 echo "host all all 0.0.0.0/0  md5" >> /etc/postgresql/14/main/pg_hba.conf
 echo "host all all 0.0.0.0/0  scram-sha-256" >> /etc/postgresql/14/main/pg_hba.conf
 
+#####################################################################################
+Remote Config(ubuntu)-postgresql16
+#####################################################################################
+Edit the /etc/postgresql/16/main/postgresql.conf file, and make uncomment and add '*':
+listen_addresses='*'
 
 
+#encryption(We can use either one)
+echo "#Remote Allow" >> /etc/postgresql/16/main/pg_hba.conf
+echo "host all all 0.0.0.0/0  md5" >> /etc/postgresql/16/main/pg_hba.conf
+echo "host all all 0.0.0.0/0  scram-sha-256" >> /etc/postgresql/16/main/pg_hba.conf
