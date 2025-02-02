@@ -15,7 +15,3 @@ sudo apt install nginx -y
 sudo systemctl start nginx
 
 sudo systemctl enable nginx
-
-sudo ufw allow 80/tcp
-
-sudo ufw allow 443/tcp
