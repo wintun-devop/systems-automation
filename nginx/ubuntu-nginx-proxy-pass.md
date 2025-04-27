@@ -9,9 +9,11 @@ cd /etc/nginx/sites-available/
 vi your_site_name.conf
 ```
 ```
-ln -s /etc/nginx/sites-available/your_site_name.conf  /etc/nginx/sites-enable/your_site_name.conf
+ln -s /etc/nginx/sites-available/your_site_name.conf  /etc/nginx/sites-enable/
 ```
-
+```
+systemctl restart nginx
+```
 ### your_site_name.conf setting with proxy buffer enable
 ```
 server {
