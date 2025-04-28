@@ -22,31 +22,26 @@ server {
 	
 	#ssl enable or disable by admin
 	#listen 443 ssl;
-	#server_name ocrplus.com;
+	#server_name mmserver-test.com;
 	#ssl_certificate /etc/nginx/certificates/your_rootca.crt;
 	#ssl_certificate_key /etc/nginx/certificates/your_rootca.key;
 	
 	#server root setting by admin with next-js-typescript folder path(2)
-	#root /var/www/mysite/html;
 	#root /home/ec2-user/site_name_new_v1;
 	
-	#管理者のクライエント証明書は設定です。ssl client certificate authention by admin(3-optional)
-	#ssl_client_certificate   /etc/nginx/certificates/mro_client.crt;
-	#ssl_verify_client   optional;
-	
-	
+
 	#Normal proxy pass location
 	location / {
 	# First attempt to serve request as file, then
 	# as directory, then fall back to displaying a 404.
 	#First attempt to serve request as file, then as directory, then fall back to displaying a 404.
 
-		proxy_pass             http://localhost:3000;        
-		proxy_read_timeout     60;
-		proxy_connect_timeout  60;
-		proxy_redirect         off;
-		proxy_buffers 8 16k;
-		proxy_buffer_size 32k;
+	proxy_pass             http://localhost:3000;        
+	proxy_read_timeout     60;
+	proxy_connect_timeout  60;
+	proxy_redirect         off;
+	proxy_buffers 8 16k;
+	proxy_buffer_size 32k;
 
         # Allow the use of websockets
         proxy_http_version 1.1;
@@ -56,7 +51,7 @@ server {
         proxy_cache_bypass $http_upgrade;
 
 	#origin 404 disable by proxy pass by admin
-    #try_files $uri $uri/ =404;
+    	#try_files $uri $uri/ =404;
     }
 }
 ```
