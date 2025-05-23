@@ -50,3 +50,7 @@ ss -tulnp | grep postgres
 ```
 sudo -u postgres psql -c "SELECT version();"
 ```
+- Check the Service Type
+```
+sudo systemctl list-units --type=service | grep postgres
+```
