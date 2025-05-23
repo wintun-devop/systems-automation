@@ -34,3 +34,19 @@ CREATE DATABASE yourdbname;
 GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
 ```
 test
+## Check the Database Server Staus
+- List Running Processes
+```
+ps aux | grep postgres
+```
+- Check Lising Port
+```
+netstat -tulnp | grep postgres
+```
+```
+ss -tulnp | grep postgres
+```
+- Verify PostgreSQL Connection
+```
+sudo -u postgres psql -c "SELECT version();"
+```
