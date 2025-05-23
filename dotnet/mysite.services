@@ -1,0 +1,13 @@
+[Unit]
+Description=MYSITEAPI-App
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/dotnet /home/ubuntu/MYSITE/MYSITE/bin/Release/net8.0/linux-x64/SmartHealthAPI.dll
+Restart=always
+User=root
+Group=root
+WorkingDirectory=/home/ubuntu/MYSITE/MYSITE
+
+[Install]
+WantedBy=multi-user.target
