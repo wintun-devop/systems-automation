@@ -2,6 +2,7 @@
 ```
 server {
     listen 80;
+    # Server Name Required
     server_name yourdomain.com;
 
     location / {
