@@ -84,12 +84,12 @@ server {
 	proxy_buffers 8 16k;
 	proxy_buffer_size 32k;
 
-        # Allow the use of websockets
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
+	# Allow the use of websockets
+	proxy_http_version 1.1;
+	proxy_set_header Upgrade $http_upgrade;
+	proxy_set_header Connection 'upgrade';
+	proxy_set_header Host $host;
+	proxy_cache_bypass $http_upgrade;
 
 	#origin 404 disable by proxy pass by admin
     	#try_files $uri $uri/ =404;
