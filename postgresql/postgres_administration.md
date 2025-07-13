@@ -54,3 +54,12 @@ sudo -u postgres psql -c "SELECT version();"
 ```
 sudo systemctl list-units --type=service | grep postgres
 ```
+### Remote configuration for postgresql-17(redhat)
+- uncomment listen_addresses = "*"
+```
+sudo vi /var/lib/pgsql/17/data/postgresql.conf
+```
+- uncomment listen_addressed = "*";
+```
+sudo vi /var/lib/pgsql/17/data/postgresql.conf
+```
