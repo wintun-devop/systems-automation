@@ -15,5 +15,11 @@ sudo vi /var/lib/pgsql/17/data/postgresql.conf
 ```
 /var/lib/pgsql/17/data/pg_hba.conf
 ```
-- add "hostssl all all 0.0.0.0/0 scram-sha-256"
+- add
+```
+hostssl all all 0.0.0.0/0 scram-sha-256
+```
+```
+sudo chown postgres:postgres  /var/lib/pgsql/17/data/db_server_cert.pem
+```
 
