@@ -22,4 +22,7 @@ hostssl all all 0.0.0.0/0 scram-sha-256
 ```
 sudo chown postgres:postgres  /var/lib/pgsql/17/data/db_server_cert.pem
 ```
+```
+sudo chmod 600  /var/lib/pgsql/17/data/db_server_cert.pem
+```
 
