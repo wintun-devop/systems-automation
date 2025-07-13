@@ -19,10 +19,17 @@ sudo vi /var/lib/pgsql/17/data/postgresql.conf
 ```
 hostssl all all 0.0.0.0/0 scram-sha-256
 ```
+### Adjust Certificate Permission
 ```
 sudo chown postgres:postgres  /var/lib/pgsql/17/data/db_server_cert.pem
 ```
 ```
 sudo chmod 600  /var/lib/pgsql/17/data/db_server_cert.pem
+```
+```
+sudo chown postgres:postgres  /var/lib/pgsql/17/data/db_server_key.pem
+```
+```
+sudo chmod 600  /var/lib/pgsql/17/data/db_server_cert_key.pem
 ```
 
