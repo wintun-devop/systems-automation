@@ -46,6 +46,9 @@ netstat -tulnp | grep postgres
 ```
 ss -tulnp | grep postgres
 ```
+```
+ss -tunlp
+```
 - Verify PostgreSQL Connection
 ```
 sudo -u postgres psql -c "SELECT version();"
