@@ -59,7 +59,7 @@ sudo systemctl list-units --type=service | grep postgres
 ```
 sudo vi /var/lib/pgsql/17/data/postgresql.conf
 ```
-- uncomment listen_addressed = "*";
+-add  "host all all 0.0.0.0/0  scram-sha-256" on following file
 ```
-sudo vi /var/lib/pgsql/17/data/postgresql.conf
+/var/lib/pgsql/17/data/pg_hba.conf
 ```
