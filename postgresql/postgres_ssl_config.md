@@ -37,3 +37,8 @@ sudo chmod 600  /var/lib/pgsql/17/data/db_server_cert_key.pem
 SELECT ssl FROM pg_stat_ssl WHERE pid = pg_backend_pid();
 ```
 
+###   postgresql connect
+```
+ psql "host=10.5.4.47 port=5432 dbname=postgres user=dbadmin sslmode=require"
+```
+
