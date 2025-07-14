@@ -33,6 +33,7 @@ sudo chown postgres:postgres  /var/lib/pgsql/17/data/db_server_key.pem
 sudo chmod 600  /var/lib/pgsql/17/data/db_server_cert_key.pem
 ```
 ### SSL Parameter
+- The column that tells you if SSL is enabled (t) or disabled (f) for that session.
 ```
 SELECT ssl FROM pg_stat_ssl WHERE pid = pg_backend_pid();
 ```
