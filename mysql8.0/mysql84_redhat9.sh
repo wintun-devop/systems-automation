@@ -36,10 +36,6 @@ systemctl enable mysqld
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "+++++++++++++++Mysql initial configuration going to start.Input desire settings+++++++++++++++"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-mysql_secure_installation
-
-#enable selinux permission
-semanage port -a -t mysqld_port_t -p tcp 3306
 
 #Restarting system
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
