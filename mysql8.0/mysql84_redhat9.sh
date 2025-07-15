@@ -12,7 +12,7 @@ dnf install -y gcc net-tools curl wget unzip
 echo "Necessary software packages installation done!"
 
 #Downloading mysql communit reop
-wget https://repo.mysql.com/https://repo.mysql.com/mysql84-community-release-el9-2.noarch.rpm
+wget https://repo.mysql.com/mysql84-community-release-el9-2.noarch.rpm
 echo "mysql repo downloading complete."
 
 #insalling mysql8 local repo
