@@ -7,7 +7,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl openssh-server tzdata perl wget curl make unzip network-manager gcc net-tools lsb-release ca-certificates apt-transport-https gnupg2 software-properties-common
 
 # Optional: Install Postfix for email notifications
-sudo apt install -y postfix
+#sudo apt install -y postfix
 # During setup, choose "Internet Site" and set your system mail name
 
 # Add GitLab CE repository
