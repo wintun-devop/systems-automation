@@ -4,7 +4,7 @@
 sudo apt update && sudo apt upgrade -y
 
 # Install required dependencies
-sudo apt install -y curl openssh-server ca-certificates tzdata perl
+sudo apt install -y curl openssh-server tzdata perl wget curl make unzip network-manager gcc net-tools lsb-release ca-certificates apt-transport-https gnupg2 software-properties-common
 
 # Optional: Install Postfix for email notifications
 sudo apt install -y postfix
