@@ -9,7 +9,7 @@ dnf update -y
 dnf upgrade -y
 
 #installing apache and necessary modules
-dnf install -y wget curl make unzip gcc net-tools httpd
+dnf install -y wget curl make unzip gcc net-tools httpd httpd-devel
 
 dnf install httpd -y
 
