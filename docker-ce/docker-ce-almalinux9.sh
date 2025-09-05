@@ -7,7 +7,7 @@ dnf update -y
 dnf remove -y docker-common docker container-selinux docker-selinux docker-engine
 
 #installing necessary libraries and packages for docker engine
-dnf install -y lvm2 device-mapper device-mapper-persistent-data device-mapper-event device-mapper-libs device-mapper-event-libs net-tools curl wget unzip
+dnf install -y lvm2 device-mapper device-mapper-persistent-data device-mapper-event device-mapper-libs device-mapper-event-libs net-tools curl wget unzip gcc make
 
 #instaling  dnf-utils
 dnf install -y dnf-utils
