@@ -33,7 +33,7 @@ echo "Docker installation is complete and Docker compose installation will start
 sleep 5s
 
 #Downloading docker-compose from github to /usr/local/bin
-curl -L "https://github.com/docker/compose/releases/download/v2.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/tag/v2.39.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 chmod +x /usr/local/bin/docker-compose
 
@@ -41,5 +41,5 @@ chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 #Vertify the docker-compose version
-dk_compose=$(docker-compose --version)
+dk_compose=$(docker compose version)
 echo "${dk_compose} has been installed."
