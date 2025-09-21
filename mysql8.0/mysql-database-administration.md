@@ -1,3 +1,7 @@
+### Mysql Download Page
+```
+https://dev.mysql.com/downloads/mysql/
+```
 ### create uesr with all permission grant
 ```
 CREATE USER 'dbadmin'@'%' IDENTIFIED BY 'YourPassword';
