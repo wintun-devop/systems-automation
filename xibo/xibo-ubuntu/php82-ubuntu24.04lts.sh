@@ -19,11 +19,6 @@ systemctl start apache2
 #get enable the apache server to run alway on starup
 systemctl enable --now apache2
 
-#check ufw list(optional here)
-ufw app list
-ufw allow 'Apache'
-ufw status
-
 add-apt-repository ppa:ondrej/php -y
 apt update -y
 
