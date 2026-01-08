@@ -12,7 +12,6 @@ apt install -y wget curl make unzip network-manager gcc gnupg net-tools lsb-rele
 # install
 apt install -y apache2
 
-
 #get start the apache server
 systemctl start apache2
 
@@ -26,7 +25,6 @@ apt install -y php8.2 php8.2-cli php8.2-fpm php8.2-gd php8.2-gnupg php8.2-xml ph
 
 #expose the php packages information
 echo "<?php phpinfo() ?>" >> /var/www/html/info.php
-
 
 systemctl restart php8.2-fpm
 
