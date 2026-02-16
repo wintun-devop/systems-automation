@@ -33,3 +33,69 @@ cd /opt/your-apps/MyNextJSApp/
 ```
 tar -xzf node_modules.tgz
 ```
+- env preparation
+```
+sudo vi .env
+```
+```
+# Database
+DATABASE_URL="postgresql://your_db_username:your_db_password@your_host_ip:5432/myapp_db?schema=public"
+
+# Session
+SESSION_SECRET="your-session-secret-change-in-production"
+SESSION_TIMEOUT_MINUTES=30
+
+# Environment
+NODE_ENV="production"
+
+# NextAuth Url
+NEXTAUTH_URL=http://192.168.1.41
+# NEXTAUTH_URL_INTERNAL=http://localhost:3000
+```
+- 
+```
+npx prisma migrate dev
+```
+```
+npx prisma db seed
+```
+```
+npm run build
+```
+
+### Service Creation
+```
+sudo restorecon -Rv /usr/local/nodejs
+```
+```
+sudo vi /etc/systemd/system/your-app.service
+```
+```
+[Unit]
+Description=YourAppNextJSApplication
+After=network.target
+
+[Service]
+Type=simple
+User=sysadmin
+WorkingDirectory=/opt/your-apps/MyNextJSApp
+ExecStart=/usr/local/nodejs/bin/node /opt/your-apps/MyNextJSApp/node_modules/next/dist/bin/next start -p 3000 -H 0.0.0.0
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+```
+```
+sudo systemctl daemon-reload
+```
+```
+sudo systemctl enable your-app.service
+```
+```
+sudo systemctl start your-app.service
+```
+```
+sudo systemctl status your-app.service
+```
