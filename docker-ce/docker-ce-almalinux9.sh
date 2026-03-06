@@ -4,7 +4,7 @@
 dnf update -y
 
 #Remove the older docker common,engine and files
-dnf remove -y docker-common docker container-selinux docker-selinux docker-engine
+sudo dnf remove -y podman docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine container-selinux docker-selinux
 
 #installing necessary libraries and packages for docker engine
 dnf install -y lvm2 device-mapper device-mapper-persistent-data device-mapper-event device-mapper-libs device-mapper-event-libs net-tools curl wget unzip gcc make
@@ -13,9 +13,9 @@ dnf install -y lvm2 device-mapper device-mapper-persistent-data device-mapper-ev
 dnf install -y dnf-utils
 
 #download and adding repo for docker-ce via config-manager
-dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 
-dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin --allowerasing
+dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 #get start the docker engine
 systemctl start docker
@@ -30,16 +30,4 @@ echo "${Docker_Version} have been installed."
 docker run hello-world
 
 echo "Docker installation is complete and Docker compose installation will start in few seconds......"
-sleep 5s
 
-#Downloading docker-compose from github to /usr/local/bin
-curl -L "https://github.com/docker/compose/releases/download/tag/v2.39.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-chmod +x /usr/local/bin/docker-compose
-
-#linking docker-compose to primary executable directory from local site
-ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-
-#Vertify the docker-compose version
-dk_compose=$(docker compose version)
-echo "${dk_compose} has been installed."
