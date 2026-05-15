@@ -19,17 +19,11 @@ systemctl start apache2
 systemctl enable --now apache2
 
 
-# Add signing key
-sudo curl -fsSLo /usr/share/keyrings/deb.sury.org-php.gpg https://packages.sury.org/php/apt.gpg
+# Add PHP repository
+add-apt-repository ppa:ondrej/php -y
 
-# Create source list for Ubuntu 26.04 (resolute)
-echo "Types: deb
-URIs: https://packages.sury.org/php/
-Suites: resolute
-Components: main
-Signed-By: /usr/share/keyrings/deb.sury.org-php.gpg" | sudo tee /etc/apt/sources.list.d/php.list
-
-apt update
+# Update repositories
+apt update -y
 
 apt install -y php8.3 php8.3-cli php8.3-fpm libapache2-mod-php8.3
 
