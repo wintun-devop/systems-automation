@@ -11,3 +11,10 @@ tar -xvf php-8.3.6.tar.gz
 ```
 cd php-8.3.6
 ```
+```
+./configure --prefix=/usr/local/php8.3 --with-apxs2=/usr/bin/apxs --enable-mbstring --with-curl --with-zlib
+make -j$(nproc)
+```
+```
+sudo make install
+```
