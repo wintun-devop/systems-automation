@@ -1,6 +1,6 @@
 ```
 sudo apt install -y build-essential libxml2-dev libssl-dev libcurl4-openssl-dev \
-libjpeg-dev libpng-dev libonig-dev libzip-dev pkg-config
+libjpeg-dev libpng-dev libonig-dev libzip-dev pkg-config apache2-dev perl
 ```
 ```
 wget https://www.php.net/distributions/php-8.3.6.tar.gz
