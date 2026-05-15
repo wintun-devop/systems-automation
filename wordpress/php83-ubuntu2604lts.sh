@@ -18,6 +18,19 @@ systemctl start apache2
 #get enable the apache server to run alway on starup
 systemctl enable --now apache2
 
+
+# Add signing key
+sudo curl -fsSLo /usr/share/keyrings/deb.sury.org-php.gpg https://packages.sury.org/php/apt.gpg
+
+# Create source list for Ubuntu 26.04 (resolute)
+echo "Types: deb
+URIs: https://packages.sury.org/php/
+Suites: resolute
+Components: main
+Signed-By: /usr/share/keyrings/deb.sury.org-php.gpg" | sudo tee /etc/apt/sources.list.d/php.list
+
+apt update
+
 apt install -y php8.3 php8.3-cli php8.3-fpm libapache2-mod-php8.3
 
 apt install -y php8.3-gd php8.3-xml php8.3-mbstring php8.3-zip php8.3-soap php8.3-curl php8.3-mysql php8.3-intl php8.3-bcmath php8.3-gettext
