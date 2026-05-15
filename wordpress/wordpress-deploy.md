@@ -24,3 +24,15 @@ sudo vi /etc/apache2/sites-available/project1.conf
    </Directory>
 </VirtualHost>
 ```
+```
+sudo a2dissite 000-default.conf
+```
+```
+sudo a2ensite project1.conf
+```
+```
+sudo a2enmod rewrite
+```
+```
+sudo systemctl restart apache2
+```
