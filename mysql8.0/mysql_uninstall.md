@@ -50,3 +50,20 @@ sudo apt autoremove -y
 ```
 sudo apt autoclean
 ```
+### delete data dir
+```
+sudo rm -rf /var/lib/mysql
+```
+```
+sudo rm -rf /var/lib/mysql-files
+```
+```
+sudo rm -rf /var/lib/mysql-keyring
+```
+### delete configuration file
+```
+sudo rm -rf /etc/mysql
+```
+```
+sudo find /etc -name "mysql*" 2>/dev/null
+```
