@@ -67,3 +67,13 @@ sudo rm -rf /etc/mysql
 ```
 sudo find /etc -name "mysql*" 2>/dev/null
 ```
+
+```
+sudo rm -rf /var/log/mysql
+```
+```
+sudo deluser mysql
+```
+```
+sudo delgroup mysql
+```
