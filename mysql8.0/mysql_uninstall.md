@@ -67,7 +67,7 @@ sudo rm -rf /etc/mysql
 ```
 sudo find /etc -name "mysql*" 2>/dev/null
 ```
-
+### Remove log files
 ```
 sudo rm -rf /var/log/mysql
 ```
@@ -76,4 +76,34 @@ sudo deluser mysql
 ```
 ```
 sudo delgroup mysql
+```
+### Remove repository configuration (if added)
+```
+sudo rm -f /etc/apt/sources.list.d/mysql.list
+```
+```
+sudo rm -f /etc/apt/trusted.gpg.d/mysql.gpg
+```
+```
+sudo apt update
+```
+### Remove PID and socket files
+```
+sudo rm -f /var/run/mysqld/mysqld.pid
+```
+```
+sudo rm -f /var/run/mysqld/mysqld.sock
+```
+```
+sudo rm -rf /var/run/mysqld
+```
+### Verify complete removal
+```
+ps aux | grep -i mysql
+```
+```
+dpkg -l | grep -i mysql
+```
+```
+sudo ss -tlnp | grep 3306
 ```
