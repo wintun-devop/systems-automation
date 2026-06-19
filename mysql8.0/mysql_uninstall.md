@@ -1,3 +1,4 @@
+## Mysql Uninstall redhat
 ### Stop the MySQL Service
 ```
 sudo systemctl stop mysqld
@@ -28,4 +29,8 @@ dnf list installed | grep mysql
 ```
 ```
 sudo find / -iname '*mysql*'
+```
+## Mysql Uninstall ubuntu
+```
+sudo systemctl stop mysql
 ```
