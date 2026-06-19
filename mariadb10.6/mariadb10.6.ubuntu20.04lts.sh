@@ -17,7 +17,7 @@ apt install -y curl make unzip network-manager gcc net-tools lsb-release ca-cert
 curl -LsS -O https://downloads.mariadb.com/MariaDB/mariadb_repo_setup
 
 #run default bash for mariadb version 10.6
-bash mariadb_repo_setup --mariadb-server-version=10.6
+bash mariadb_repo_setup --mariadb-server-version=10.6.27
 
 #update to repo packages
 apt update -y
