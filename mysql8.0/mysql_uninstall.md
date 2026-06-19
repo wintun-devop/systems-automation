@@ -34,3 +34,19 @@ sudo find / -iname '*mysql*'
 ```
 sudo systemctl stop mysql
 ```
+```
+sudo systemctl disable mysql
+```
+```
+sudo apt purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-* -y
+```
+```
+sudo apt purge mysql-server mysql-client mysql-community-server mysql-community-client \
+mysql-community-common mysql-community-libs mysql-apt-config -y
+```
+```
+sudo apt autoremove -y
+```
+```
+sudo apt autoclean
+```
