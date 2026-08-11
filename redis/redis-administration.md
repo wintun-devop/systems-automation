@@ -17,3 +17,11 @@ ACL SETUSER redisadmin on >UIFksuf234#$ ~* +@all
 ```
 redis-cli ACL SETUSER myuser on >mypassword ~* +@all
 ```
+
+### connect with username and password
+```
+redis-cli --user myuser --pass mypassword
+```
+```
+ACL LIST
+```
