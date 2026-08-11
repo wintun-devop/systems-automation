@@ -23,5 +23,15 @@ redis-cli ACL SETUSER myuser on >mypassword ~* +@all
 redis-cli --user myuser --pass mypassword
 ```
 ```
+redis-cli -u redis://myuser:mypassword@127.0.0.1:6379
+```
+```
 ACL LIST
+```
+### Remote config
+```
+sudo cp /etc/redis/redis.conf /etc/redis/redis.conf.bk
+```
+```
+sudo vi /etc/redis/redis.conf
 ```
