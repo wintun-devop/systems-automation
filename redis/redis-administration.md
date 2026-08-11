@@ -32,6 +32,14 @@ ACL LIST
 ```
 sudo cp /etc/redis/redis.conf /etc/redis/redis.conf.bk
 ```
+- bind 0.0.0.0 
 ```
 sudo vi /etc/redis/redis.conf
 ```
+```
+sudo systemctl restart redis
+```
+```
+sudo netstat -tunlp
+```
+
