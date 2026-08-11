@@ -10,6 +10,9 @@ redis-cli
 ```
 ACL SETUSER myuser on >mypassword ~* +@all
 ```
+```
+ACL SETUSER redisadmin on >UIFksuf234#$ ~* +@all
+```
 - or
 ```
 redis-cli ACL SETUSER myuser on >mypassword ~* +@all
