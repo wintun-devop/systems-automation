@@ -42,4 +42,44 @@ sudo systemctl restart redis
 ```
 sudo netstat -tunlp
 ```
+### Redis Setting
+- check setting
+```
+CONFIG GET maxmemory
+```
+```
+CONFIG GET bind
+```
+- set setting
+```
+CONFIG SET maxmemory 4gb
+```
+```
+CONFIG REWRITE
+```
+### Server information
+- Server info
+```
+INFO server
+```
+- Memory usage
+```
+INFO memory
+```
+- Replication status
+```
+INFO replication
+```
+- General statistics
+```
+INFO stats
+```
+- Database key counts
+```
+INFO keyspace
+```
+- Connected clients
+```
+INFO clients
+```
 
