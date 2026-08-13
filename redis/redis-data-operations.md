@@ -1,0 +1,30 @@
+### Data Types
+- String	(Binary-safe string or number)
+    - SET 
+    - GET 
+    - INCR
+    - APPEND
+- List	(Ordered list of strings)
+    - LPUSH 
+    - RPUSH
+    - LRANGE
+    - LPOP
+- Set	(Unordered unique strings	)
+    - SADD
+    - SMEMBERS
+    - SISMEMBER
+- Sorted Set(Set with scores for ordering)
+    - ZADD
+    - ZRANGE
+    - ZRANGEBYSCORE
+- Hash	(Field-value maps)
+    - HSET 
+    - HGET
+    - HGETALL
+- Stream (Append-only log)
+    - XADD
+    - XREAD
+    - XRANGE
+- RedisJSON (Special Extension Need to install)
+    - JSON.SET
+    - JSON.GET
