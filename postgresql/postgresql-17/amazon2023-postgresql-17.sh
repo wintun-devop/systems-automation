@@ -1,4 +1,5 @@
 #!/bin/bash
+# sudo -u postgres psql(initial login with default user)
 
 #Necessary Update for system packages
 echo "Updating the system packages ......................................................................................................."
